@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleSharp.Css", "AngleSharp.Css\AngleSharp.Css.csproj", "{73856B9E-967D-44AA-A644-91CBBE75BF9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Css", "AngleSharp.Css\AngleSharp.Css.csproj", "{73856B9E-967D-44AA-A644-91CBBE75BF9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleSharp.Css.Tests", "AngleSharp.Css.Tests\AngleSharp.Css.Tests.csproj", "{9136D59F-9F50-4E02-96B2-3EAC114B95FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Css.Tests", "AngleSharp.Css.Tests\AngleSharp.Css.Tests.csproj", "{9136D59F-9F50-4E02-96B2-3EAC114B95FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleSharp.Performance.Common", "AngleSharp.Performance.Common\AngleSharp.Performance.Common.csproj", "{CB9D1E29-D529-4525-B139-2A25115BCA96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Performance.Common", "AngleSharp.Performance.Common\AngleSharp.Performance.Common.csproj", "{CB9D1E29-D529-4525-B139-2A25115BCA96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleSharp.Performance.Utilities", "AngleSharp.Performance.Utilities\AngleSharp.Performance.Utilities.csproj", "{1FF31B98-B7D2-4694-A430-09DD112BBE33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Performance.Utilities", "AngleSharp.Performance.Utilities\AngleSharp.Performance.Utilities.csproj", "{1FF31B98-B7D2-4694-A430-09DD112BBE33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleSharp.Performance.Css", "AngleSharp.Performance.Css\AngleSharp.Performance.Css.csproj", "{37F366DB-78D6-485F-9D8C-7C65A4B0186D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngleSharp.Performance.Css", "AngleSharp.Performance.Css\AngleSharp.Performance.Css.csproj", "{37F366DB-78D6-485F-9D8C-7C65A4B0186D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{988B2C40-782B-4128-9551-7AE65B60F903}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\build.cake = ..\build.cake
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngleSharp.Performance.Css.Cssom", "AngleSharp.Performance.Css.Cssom\AngleSharp.Performance.Css.Cssom.csproj", "{522B742C-8A7D-4701-A6D8-E82BE30C5F91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,8 +48,15 @@ Global
 		{37F366DB-78D6-485F-9D8C-7C65A4B0186D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F366DB-78D6-485F-9D8C-7C65A4B0186D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F366DB-78D6-485F-9D8C-7C65A4B0186D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522B742C-8A7D-4701-A6D8-E82BE30C5F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522B742C-8A7D-4701-A6D8-E82BE30C5F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522B742C-8A7D-4701-A6D8-E82BE30C5F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522B742C-8A7D-4701-A6D8-E82BE30C5F91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FFA42DA-48D8-47D3-A9C8-CDF613ABC9AB}
 	EndGlobalSection
 EndGlobal
