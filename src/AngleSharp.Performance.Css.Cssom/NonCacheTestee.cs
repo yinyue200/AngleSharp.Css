@@ -22,9 +22,10 @@ namespace AngleSharp.Performance.Css.Cssom
             var context = BrowsingContext.New(Configuration.Default.WithCss());
             var parser = context.GetService<IHtmlParser>();
             var document = parser.ParseDocument(argument);
-            foreach(var one in document.DocumentElement.DescendentsAndSelf().OfType<IElement>())
+            var COLL = document.DefaultView.GetStyleCollection();
+            foreach (var one in document.DocumentElement.DescendentsAndSelf().OfType<IElement>())
             {
-                ls.Add(one.ComputeCurrentStyle());
+                ls.Add(COLL.ComputeDeclarations(one));
             }
         }
     }

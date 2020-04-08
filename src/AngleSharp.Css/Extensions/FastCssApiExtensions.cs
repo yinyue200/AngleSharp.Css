@@ -41,14 +41,14 @@ namespace AngleSharp.Css
         public CssInfoCache(IWindow window)
         {
             Window = window;
-            cssStyleRules = new Lazy<StyleCollection>(() =>
+            cssStyleRules = new Lazy<IStyleCollection>(() =>
               {
                   return Window.GetStyleCollection();
               }, false);
         }
 
         readonly Dictionary<(IElement, ICssStyleDeclaration), ICssStyleDeclaration> computeCascadedStyleCache = new Dictionary<(IElement, ICssStyleDeclaration), ICssStyleDeclaration>();
-        ICssStyleDeclaration ComputeCascadedStyle(StyleCollection styleCollection, IElement element, ICssStyleDeclaration parent = null)
+        ICssStyleDeclaration ComputeCascadedStyle(IStyleCollection styleCollection, IElement element, ICssStyleDeclaration parent = null)
         {
             var key = (element, parent);
             if (computeCascadedStyleCache.TryGetValue(key,out var result))
@@ -63,7 +63,7 @@ namespace AngleSharp.Css
             }
         }
 
-        ICssStyleDeclaration ComputeDeclarations(StyleCollection rules, IElement element, String pseudoSelector = null)
+        ICssStyleDeclaration ComputeDeclarations(IStyleCollection rules, IElement element, String pseudoSelector = null)
         {
             var computedStyle = new CssStyleDeclaration(element.Owner?.Context);
             var nodes = element.GetAncestors().OfType<IElement>();
@@ -88,7 +88,7 @@ namespace AngleSharp.Css
             return computedStyle;
         }
 
-        readonly Lazy<StyleCollection> cssStyleRules;
+        readonly Lazy<IStyleCollection> cssStyleRules;
         /// <summary>
         /// Gets the computed style of the given element from the current view.
         /// </summary>
